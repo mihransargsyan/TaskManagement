@@ -12,7 +12,10 @@
 </head>
 <body>
 
-<form style="width: 1000px;
+<div style=" width: 500px;
+             height: 500px;
+             margin: auto">
+<form style="width: 500px;
             height: 500px;
             margin: auto;"
       action="/TaskManagement_war_exploded/login" method="post">
@@ -22,6 +25,6 @@
     <input type="password" name="password"><br>
     <input type="submit" value="ok">
 </form>
-
+</div>
 </body>
 </html>

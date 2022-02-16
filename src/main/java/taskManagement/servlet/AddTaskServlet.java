@@ -29,10 +29,8 @@ public class AddTaskServlet extends HttpServlet {
 
         String taskName = req.getParameter("name");
         String desc = req.getParameter("desc");
-        String userEmail = req.getParameter("user");
-
+        String userEmail = req.getParameter("userEmail");
         long id = userManager.getByEmail(userEmail).getId();
-
         String status = req.getParameter("status");
         String deadline = req.getParameter("deadline");
         task.setName(taskName);
@@ -46,7 +44,7 @@ public class AddTaskServlet extends HttpServlet {
             e.printStackTrace();
         }
         taskManager.add(task);
-        req.getRequestDispatcher("/WEB-INF/ManagerHome.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/AddTask.jsp").forward(req, resp);
 
     }
 }

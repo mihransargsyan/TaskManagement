@@ -32,7 +32,7 @@ public class AddUserServlet extends HttpServlet {
         user.setType(UserType.valueOf(userType));
         userManager.addUser(user);
 
-        req.getRequestDispatcher("/WEB-INF/ManagerHome.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/AddUser.jsp").forward(req, resp);
 
     }
 }
